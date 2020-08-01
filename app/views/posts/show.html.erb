@@ -1,0 +1,12 @@
+<div class= "background"></div>
+<div class="detail">
+  <h3>投稿詳細ページ</h3>
+  <h4><%= @post.user.email %></h4>
+  <%= @post.image %>
+  <h4><%= @post.text %></h4>
+  <h4>いいね件数: <%= @post.likes.count %></h4>
+  <div id="likes_buttons_<%= @post.id %>">
+    <%= render partial: 'likes/like', locals: { post: @post} %>
+  </div>
+  <%= link_to "ホームへ戻る", posts_path %>
+</div>

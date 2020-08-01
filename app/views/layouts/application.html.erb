@@ -6,10 +6,31 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
+    <div class="header">
+      <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+        <%= form.submit "検索", class: "search-btn" %>
+      <% end %>
+      <h3 class="title"><a href="/">Coffeeblog</a></h3>
+      <div class="menu">
+        <% if user_signed_in? %>
+          <div class="menulist">
+            <%= link_to "ログアウト", destroy_user_session_path, class: "logout", method: :delete %>
+            <%= link_to "投稿する", new_post_path, class: "post" %>
+            <%= link_to "ユーザー一覧", users_path, class: "userlist"%>
+          </div>
+        <% else %> 
+          <div class="loginlist">
+            <%= link_to "ログイン", new_user_session_path, class: "login" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "register" %>
+          </div>
+        <% end %>
+       </div>  
+    </div>
     <%= yield %>
-  </body>
+  </body>  
 </html>
