@@ -1,0 +1,9 @@
+<div class= "postlist">
+<h4>投稿一覧</h4>
+  <div class= "each">
+    <% @posts.each do |post| %>
+    <p><a href="/posts/<%= post.id %>", class="blogname"><%= post.name %></a></p>
+    <h5><%= post.text %></h5>   
+    <% end %>
+  </div>  
+</div>  

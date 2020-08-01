@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Coffeeblog</title>
+</head>
+<Body>
+  <div class= "mainwrap">
+  <%= image_tag "/nathan-dumlao-6VhPY27jdps-unsplash.jpg", width: "370px"%>
+  <%= image_tag "/karl-fredrickson-TYIzeCiZ_60-unsplash.jpg", width: "370px"%>
+  <%= image_tag "/cathryn-lavery-NsWcRlBT_74-unsplash.jpg", width: "370px"%>
+    <div class= "gridlist">
+      <div class ="pickup">
+        <h2>イチオシ投稿</h2>
+      </div>
+      <div class="section">
+        <% @posts.each do |post| %>
+          <p><a href="/posts/<%= post.id %>"><%= post.name %></a></p>
+          <h6><%= link_to '削除', post_path(post.id), method: :delete %></h6>
+          <h6>いいね<%= post.like_ids.count %></h6>
+        <% end %>
+      </div>
+    </div>
+    <div class=rightcontent>
+      <div class="event">
+        <h3>全国のイベント</h3>
+      </div>
+      <div class= "venue">
+        <div class= "region1">
+          <h3>関東</h3>
+          <h4>SCAJ ワールドスペシャルティコーヒーカンファレンス 2020</h4>
+          <p>場所：【有明】東京ビッグサイト<br>
+          日程：10月14日(水) ~ 16日(金)<br>
+          ホームページ：
+          <%= link_to "http://www.scajconference.jp/"%>
+          </p>
+        </div>
+        <div class="region2">
+          <h3>北陸</h3>
+          <h4>Japan Coffee Festival in 越前市</h4>
+          <p>場所：【越前市】場所未定<br>
+          日程：12月5日(土) ~ 6日(日)<br>
+          ホームページ：
+          <%= link_to "japancoffeefestival.com/japan-coffee-festival/"%>
+          </p>
+        </div>
+      </div>
+     </div>   
+</Body>

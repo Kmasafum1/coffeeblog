@@ -1,0 +1,167 @@
+* {
+	margin:0; padding:0; 	/*全要素のマージン・パディングをリセット*/
+	line-height:1.5;	/*全要素の行の高さを1.5倍にする*/
+	color:#333333;		/*文字色*/
+
+} 
+body {
+	text-align:center;		/*IE6以下でセンタリングするための対策*/
+}
+.header{
+  display: flex;
+  background-color: rgb(78, 36, 20);
+  width: 100vw;
+  height: 70px;
+  align-items: center;
+  justify-content: space-around;
+}
+.title{
+  font-size: 16px;
+  line-height: 60px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.title a{
+  text-decoration: none;
+  color: aliceblue;
+}
+.search-form{
+  margin-left: 100px;
+}
+.menu{
+  display: flex;
+}
+.menulist{
+  display: flex;
+}
+.logout{
+  line-height: 60px;
+  color: aliceblue;
+  font-size: 15px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.post{
+  line-height: 60px;
+  color: aliceblue;
+  font-size: 15px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.userlist{
+  line-height: 60px;
+  color: aliceblue;
+  font-size: 15px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.login{
+  line-height: 60px;
+  color: aliceblue;
+  font-size: 15px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.register{
+  line-height: 60px;
+  color: aliceblue;
+  font-size: 15px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.pickup{
+  margin: 0;
+  padding: 0;
+}
+.pickup h2{
+  font-size: 17px;
+  margin-top: 5px;
+  font-family: Montserrat,sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 33px 30px 10px;
+  text-align: left;
+  color: rgb(78, 36, 20);
+  border-bottom: 1px solid #444444;
+  height: 5px;
+  width: 600px;
+  line-height: 5px;
+}
+.gridlist{
+  margin-top: 45px;
+  float: left;
+  width: 700px;
+}
+.section{
+  display: block;
+}
+.section p{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.rightcontent{
+  float: right;
+  margin-top: 45px;
+  width: calc(100vw - 700px);
+}
+.event h3{
+  font-size: 17px;
+  margin-top: 5px;
+  font-family: Montserrat,sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 33px 30px 10px;
+  text-align: left;
+  color: rgb(78, 36, 20);
+  border-bottom: 1px solid #444444;
+  height: 5px;
+  width: calc (100vw - 700px);
+  line-height: 5px;
+}
+.container h3{
+  margin:20px 20px;
+}
+.text{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  
+}
+.region1{
+  margin-bottom: 20px;
+}
+.postlist{
+  margin: auto;
+  width: calc(100vw - 300px);
+}
+.postlist h4{
+  margin: 20px 20px;
+}
+.blogname{
+  margin: 20px 20px;
+}
+.each p{
+  margin-bottom: 20px;
+}
+.each h5{
+  margin-bottom: 20px;
+}
+.detail{
+  width: calc(100vw - 300px);
+  margin: auto;
+}
+.detail h3{
+  margin: 20px 20px;
+}
+.detail h4{
+  margin: 20px 20px;
+}
+.background{
+  background-image: url('img/mike-kenneally-tNALoIZhqVM-unsplash.jpg');
+}
+
